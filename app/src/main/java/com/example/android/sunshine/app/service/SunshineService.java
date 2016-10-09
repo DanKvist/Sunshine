@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.text.format.Time;
 import android.util.Log;
 
+import com.example.android.sunshine.app.BuildConfig;
 import com.example.android.sunshine.app.data.WeatherContract;
 
 import org.json.JSONArray;
@@ -68,7 +69,7 @@ public class SunshineService extends IntentService {
                     .appendQueryParameter(FORMAT_PARAM, format)
                     .appendQueryParameter(UNITS_PARAM, units)
                     .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
-                    .appendQueryParameter(APPID_PARAM, "1e8626739a190e789e637bc8cb0da29e")
+                    .appendQueryParameter(APPID_PARAM, BuildConfig.OPEN_WEATHER_MAP_API_KEY)
                     .build();
 
             URL url = new URL(builtUri.toString());
