@@ -178,7 +178,7 @@ public class DetailFragment extends Fragment implements LoaderManager.LoaderCall
             float pressure = cursor.getFloat(COL_WEATHER_PRESSURE);
             mPressureView.setText(getActivity().getString(R.string.format_pressure, pressure));
 
-            mForecast = String.format("%s - %s - %s/%s", dateText, description, high, low);
+            mForecast = String.format("%s - %s - %s/%s", dateText, description, highString, lowString);
 
             if (mShareActionProvider != null) {
                 mShareActionProvider.setShareIntent(createShareForecastIntent());
